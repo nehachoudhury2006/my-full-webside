@@ -1,0 +1,207 @@
+:root {
+    --bg-cream: #fff8f3;
+    --text-dark: #1f1720;
+    --accent: #db7093;
+    --card-bg: #ffffff;
+    --line: rgba(31, 23, 32, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, rgba(219, 112, 147, 0.12), transparent 20%),
+        var(--bg-cream);
+    color: var(--text-dark);
+}
+
+.lookbook-nav {
+    padding: 28px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.mini-chip {
+    padding: 10px 14px;
+    border-radius: 999px;
+}
+
+.lookbook-header {
+    text-align: center;
+    padding: 30px 20px 40px;
+}
+
+.section-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-size: 0.76rem;
+    margin-bottom: 10px;
+}
+
+.lookbook-header h1 {
+    font-size: clamp(2.8rem, 6vw, 4.6rem);
+    margin-bottom: 12px;
+}
+
+.lookbook-header h1 span {
+    color: var(--accent);
+}
+
+.lookbook-header p {
+    color: #6b7280;
+    max-width: 58ch;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 5% 90px;
+}
+
+.style-card {
+    position: relative;
+    background: var(--card-bg);
+    border-radius: 26px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 22px 40px rgba(31, 23, 32, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.style-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 50px rgba(31, 23, 32, 0.1);
+}
+
+.img-block {
+    height: 340px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.price-overlay {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.info-section {
+    padding: 18px 6px 8px;
+    text-align: center;
+}
+
+.style-name {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.info-section p {
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.select-btn,
+.booking-form button {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-weight: 800;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #111827, var(--accent));
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(17, 24, 39, 0.4);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    width: min(100%, 420px);
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 8px;
+}
+
+#modalStyleName,
+.modal-price strong {
+    color: var(--accent);
+}
+
+.modal-price {
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.booking-form {
+    display: grid;
+    gap: 12px;
+}
+
+.booking-form input {
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 14px 16px;
+}

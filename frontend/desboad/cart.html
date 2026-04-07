@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Cart</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../index.html">
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="logo-section">
+                    <div class="logo-icon">LL</div>
+                    <div>
+                        <strong class="logo-text">Luxury Loop</strong>
+                        <p class="logo-sub">Personal concierge dashboard</p>
+                    </div>
+                </div>
+
+                <nav class="menu">
+                    <a href="desboard.html" class="menu-item">Home</a>
+                    <a href="selon/selon.html" class="menu-item">Salon</a>
+                    <a href="spa/spa.html" class="menu-item">Spa</a>
+                    <a href="hotel/hotel.html" class="menu-item">Hotel</a>
+                    <a href="travel/trevel.html" class="menu-item">Travel</a>
+                    <a href="cart.html" class="menu-item active">Cart</a>
+                    <a href="ai-assistant.html" class="menu-item ai-menu-item"><span class="ai-orb">🤖</span><span>AI Assistant</span></a>
+                </nav>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar" data-user-avatar>G</div>
+                <div>
+                    <h3 data-user-name data-fallback-name="Guest">Guest</h3>
+                    <p data-user-email>Not connected</p>
+                </div>
+                <button class="auth-pill" id="cartLogoutButton" data-redirect="../index.html">Logout</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="cart-page-shell">
+                <div class="cart-page-header">
+                    <div>
+                        <p class="top-label">Booking Cart</p>
+                        <h1>Everything booked by <span data-user-name data-fallback-name="Guest">Guest</span></h1>
+                    </div>
+                    <strong id="cartGrandTotal">Total: $0</strong>
+                </div>
+                <div id="bookingCartGrid" class="cart-grid">
+                    <article class="cart-empty">
+                        <h3>No bookings yet</h3>
+                        <p>Once you book salon, spa, room, or dining items, they will appear here.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="feedbackModal" class="feedback-modal" hidden>
+        <div class="feedback-card">
+            <p class="top-label">Before logout</p>
+            <h2>Share quick feedback</h2>
+            <p class="feedback-copy">Tell us how your booking cart experience felt. Then we’ll log you out.</p>
+            <textarea id="feedbackInput" rows="5" placeholder="Example: I liked seeing my bookings grouped by category."></textarea>
+            <div class="feedback-actions">
+                <button id="skipFeedback" class="feedback-secondary">Skip</button>
+                <button id="submitFeedback" class="feedback-primary">Submit & Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="shared.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

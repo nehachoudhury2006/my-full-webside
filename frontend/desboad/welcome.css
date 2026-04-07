@@ -1,0 +1,73 @@
+:root {
+    --text: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 22%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.18), transparent 24%),
+        linear-gradient(135deg, #060b14 0%, #0d1625 48%, #05070c 100%);
+}
+
+.welcome-shell {
+    min-height: 100vh;
+    padding: 28px 34px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-topbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.welcome-btn {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.welcome-btn.primary {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    border: none;
+}
+
+.welcome-content {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.welcome-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: #7dd3fc;
+    margin-bottom: 18px;
+}
+
+.welcome-content h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.92;
+}
+
+.welcome-line {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}

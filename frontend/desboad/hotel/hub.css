@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Manrope', sans-serif; }
+body { overflow-x: hidden; transition: background 0.6s ease, color 0.6s ease; min-height: 100vh; }
+
+/* 1. DYNAMIC THEMES */
+/* The "Mix Aesthetic" for the main page */
+.theme-main { 
+    background: linear-gradient(135deg, #ffdfd3, #fec8d8, #d291bc, #957dad);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: #2d3436; 
+}
+@keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.theme-hotel { background: #0f172a; color: #f8fafc; } /* Dark Luxury Blue */
+.theme-food { background: #fff7ed; color: #431407; } /* Warm Orange/Cream */
+
+/* 2. NAVIGATION */
+.top-nav { padding: 20px 5%; display: none; position: fixed; width: 100%; z-index: 100; justify-content: space-between; align-items: center; }
+.back-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); padding: 10px 25px; border-radius: 50px; cursor: pointer; font-weight: 700; transition: 0.3s; color: inherit; backdrop-filter: blur(5px); }
+.back-btn:hover { background: rgba(255,255,255,0.8); color: black; transform: translateX(-5px); }
+.mini-chip { padding: 10px 14px; border-radius: 999px; }
+
+/* 3. MAIN MENU CARDS */
+.main-menu { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 5%; text-align: center; }
+.section-kicker { text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.74rem; color: rgba(255,255,255,0.85); margin-bottom: 14px; }
+.main-title { font-size: 55px; font-weight: 800; margin-bottom: 50px; text-align: center; color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.menu-copy { max-width: 60ch; color: rgba(255,255,255,0.9); margin-bottom: 34px; }
+.choice-container { display: flex; gap: 40px; width: 100%; max-width: 1000px; justify-content: center; flex-wrap: wrap; }
+.choice-card { flex: 1; min-width: 320px; height: 450px; border-radius: 30px; overflow: hidden; position: relative; cursor: pointer; transition: 0.4s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background: #eee; }
+.choice-card:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+.choice-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; filter: brightness(0.7); }
+.choice-card:hover img { transform: scale(1.08); filter: brightness(0.9); }
+.card-content { position: absolute; bottom: 30px; left: 30px; color: white; }
+.card-content h2 { font-size: 38px; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+
+/* 4. HOTEL & FOOD SECTIONS */
+#hotel-section, #food-section { display: none; padding: 120px 5% 80px; text-align: center; }
+.section-title { font-size: 50px; font-weight: 800; margin-bottom: 40px; }
+.gold-text { color: #fbbf24; }
+.red-text { color: #ea580c; }
+
+/* Grid Layouts */
+.hotel-grid, .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.hotel-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; overflow: hidden; text-align: left; }
+.hotel-card img { width: 100%; height: 250px; object-fit: cover; }
+.hotel-info { padding: 25px; }
+.hotel-info h3 { font-size: 24px; color: #fbbf24; margin-bottom: 10px; }
+
+/* Food Tabs & Layout */
+.meal-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+.tab-btn { background: white; border: 2px solid #fdba74; color: #ea580c; padding: 12px 30px; border-radius: 50px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+.tab-btn.active, .tab-btn:hover { background: #ea580c; color: white; border-color: #ea580c; }
+.menu-category { display: none; }
+.menu-category.active { display: block; animation: fadeIn 0.5s ease; }
+.food-card { background: white; border-radius: 20px; padding: 15px; display: flex; align-items: center; gap: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+.food-card img { width: 90px; height: 90px; border-radius: 15px; object-fit: cover; }
+.food-info h4 { font-size: 20px; color: #431407; }
+.food-price { font-weight: 800; color: #ea580c; font-size: 18px; margin-top: 5px; display: block; }
+.food-button{ padding-left: 50px;}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 700px) {
+    .main-title,
+    .section-title {
+        font-size: 38px;
+    }
+}

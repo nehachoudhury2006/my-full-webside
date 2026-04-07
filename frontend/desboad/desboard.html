@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Loop Dashboard</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../index.html">
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="logo-section">
+                    <div class="logo-icon">LL</div>
+                    <div>
+                        <strong class="logo-text">Luxury Loop</strong>
+                        <p class="logo-sub">Personal concierge dashboard</p>
+                    </div>
+                </div>
+
+                <nav class="menu">
+                    <a href="desboard.html" class="menu-item active">Home</a>
+                    <a href="selon/selon.html" class="menu-item">Salon</a>
+                    <a href="spa/spa.html" class="menu-item">Spa</a>
+                    <a href="hotel/hotel.html" class="menu-item">Hotel</a>
+                    <a href="travel/trevel.html" class="menu-item">Travel</a>
+                    <a href="cart.html" class="menu-item">Cart</a>
+                    <a href="ai-assistant.html" class="menu-item ai-menu-item"><span class="ai-orb">🤖</span><span>AI Assistant</span></a>
+                </nav>
+            </div>
+
+            <div class="profile-card">
+                <div class="avatar" data-user-avatar>G</div>
+                <div>
+                    <h3 data-user-name data-fallback-name="Guest">Guest</h3>
+                    <p data-user-email>Not connected</p>
+                </div>
+                <button class="auth-pill" data-logout data-redirect="../index.html">Logout</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <header class="top-bar">
+                <div>
+                    <p class="top-label">Dashboard</p>
+                    <h1>Welcome, <span data-user-name data-fallback-name="Guest">Guest</span></h1>
+                </div>
+                <div class="auth-group">
+                    <button class="auth-link" data-auth-state="guest" data-google-login>Sign In</button>
+                    <button class="auth-link" data-auth-state="guest" data-google-login>Sign Up</button>
+                    <button class="auth-link" data-auth-state="user" hidden data-logout data-redirect="../index.html">Sign Out</button>
+                </div>
+            </header>
+
+            <section class="hero-section">
+                <div class="hero-copy">
+                    <p class="hero-tag">Curated paths, not one repeated pattern</p>
+                    <h2>Each service now opens a fully styled space with working navigation and session-aware actions.</h2>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <strong>4</strong>
+                        <span>main experiences</span>
+                    </div>
+                    <div>
+                        <strong>3</strong>
+                        <span>salon detail pages</span>
+                    </div>
+                    <div>
+                        <strong>1</strong>
+                        <span>shared login flow</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <a href="selon/selon.html" class="dashboard-card salon-card">
+                    <span class="card-kicker">Beauty</span>
+                    <h3>Salon Studio</h3>
+                    <p>Hair, skin, and nails with editorial booking cards.</p>
+                </a>
+                <a href="spa/spa.html" class="dashboard-card spa-card">
+                    <span class="card-kicker">Wellness</span>
+                    <h3>The Sanctuary</h3>
+                    <p>Calm booking flow with a softer premium layout.</p>
+                </a>
+                <a href="hotel/hotel.html" class="dashboard-card hotel-card">
+                    <span class="card-kicker">Stay + Dine</span>
+                    <h3>Grand Resort</h3>
+                    <p>Rooms, dining, and meal tabs inside a bold hospitality UI.</p>
+                </a>
+                <a href="travel/trevel.html" class="dashboard-card travel-card">
+                    <span class="card-kicker">Journey</span>
+                    <h3>Wanderlust</h3>
+                    <p>Destination cards, travel search, and detailed escapes.</p>
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <script src="shared.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

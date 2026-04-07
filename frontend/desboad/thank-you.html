@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmed</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="thank-you.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../index.html">
+    <main class="thanks-shell">
+        <section class="thanks-card">
+            <p class="eyebrow">Appointment confirmed</p>
+            <h1>Thank you, <span id="thankYouName">Guest</span>.</h1>
+            <p class="lead">Your booking has been saved. Use the summary below for your next steps.</p>
+
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <span>Category</span>
+                    <strong id="thankYouCategory">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Service</span>
+                    <strong id="thankYouService">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Date</span>
+                    <strong id="thankYouDate">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Time</span>
+                    <strong id="thankYouTime">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Guests</span>
+                    <strong id="thankYouPeople">-</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Email</span>
+                    <strong id="thankYouEmail">-</strong>
+                </div>
+            </div>
+
+            <div class="notes-block">
+                <span>Next steps</span>
+                <p id="thankYouNotes">Please arrive 10 minutes early and keep your confirmation handy.</p>
+            </div>
+
+            <div class="action-row">
+                <a href="desboard.html" class="primary-link">Return to dashboard</a>
+                <a id="bookAnotherLink" href="desboard.html" class="secondary-link">Book another experience</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="thank-you.js"></script>
+</body>
+</html>

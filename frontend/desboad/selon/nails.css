@@ -1,0 +1,104 @@
+:root {
+    --bg: #f7f1eb;
+    --ink: #18181b;
+    --accent: #fb7185;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Manrope', sans-serif; }
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f7f1eb, #f2e7dd);
+    color: var(--ink);
+}
+
+.nail-nav,
+.flow-shell {
+    width: min(980px, 92%);
+    margin: 0 auto;
+}
+
+.nail-nav {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+}
+
+.nail-nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mini-chip {
+    padding: 10px 14px;
+    border-radius: 999px;
+}
+
+.flow-shell {
+    padding-bottom: 80px;
+}
+
+.flow-step {
+    display: none;
+    padding: 34px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 24px 60px rgba(24, 24, 27, 0.08);
+}
+
+.active-step {
+    display: block;
+}
+
+.step-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-size: 0.76rem;
+    margin-bottom: 12px;
+}
+
+.flow-step h1,
+.flow-step h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.flow-form {
+    display: grid;
+    gap: 16px;
+}
+
+.flow-form label {
+    font-weight: 700;
+}
+
+.flow-form input,
+.flow-form select,
+.flow-form textarea {
+    width: 100%;
+    margin-top: 7px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid #e7ddd4;
+    background: #fffdfb;
+}
+
+.flow-form button {
+    border: none;
+    border-radius: 16px;
+    padding: 14px 16px;
+    background: #111827;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.confirmation-card {
+    display: grid;
+    gap: 12px;
+    line-height: 1.6;
+}

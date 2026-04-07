@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Access</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="auth-shell">
+        <section class="auth-aside">
+            <p class="auth-eyebrow">Welcome</p>
+            <h1 id="authHeadingName">Guest</h1>
+            <p class="auth-copy">Log in with your password, or sign in to create one if you do not have an account yet.</p>
+        </section>
+
+        <section class="auth-panel">
+            <div class="panel-card">
+                <div class="auth-tabs">
+                    <button id="signInTab" class="tab-btn" type="button">Sign In</button>
+                    <button id="logInTab" class="tab-btn active" type="button">Log In</button>
+                </div>
+
+                <div class="form-frame">
+                    <form id="logInForm" class="auth-form active-form">
+                        <h2>Log In</h2>
+                        <p class="form-copy">Enter your name, email, and password to continue.</p>
+                        <label>
+                            Name
+                            <input id="logInName" type="text" required>
+                        </label>
+                        <label>
+                            Email ID
+                            <input id="logInEmail" type="email" required>
+                        </label>
+                        <label>
+                            Password
+                            <div class="password-field">
+                                <input id="logInPassword" type="password" required>
+                                <button type="button" class="password-toggle" data-toggle-password="logInPassword" aria-label="Show password">Show</button>
+                            </div>
+                        </label>
+                        <button type="submit">Proceed to Homepage</button>
+                    </form>
+
+                    <form id="signInForm" class="auth-form">
+                        <h2>Sign In</h2>
+                        <p class="form-copy">Create your account and set a password to access the homepage.</p>
+                        <label>
+                            Name
+                            <input id="signInName" type="text" required>
+                        </label>
+                        <label>
+                            Email ID
+                            <input id="signInEmail" type="email" required>
+                        </label>
+                        <label>
+                            Create Password
+                            <div class="password-field">
+                                <input id="signInPassword" type="password" required>
+                                <button type="button" class="password-toggle" data-toggle-password="signInPassword" aria-label="Show password">Show</button>
+                            </div>
+                        </label>
+                        <button type="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

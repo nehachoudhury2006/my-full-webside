@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Appointment Flow</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="nails.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../index.html">
+    <nav class="nail-nav">
+        <a href="selon.html">Back to Salon</a>
+        <div>NAIL ATELIER</div>
+        <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+    </nav>
+
+    <main class="flow-shell">
+        <section id="nail-step-1" class="flow-step active-step">
+            <p class="step-tag">Step 1</p>
+            <h1>Nail Questions</h1>
+            <form id="nailQuestionForm" class="flow-form">
+                <label>Which style do you want?
+                    <select id="nailStyle" required>
+                        <option value="">Select style</option>
+                        <option value="Soft Gloss">Soft Gloss</option>
+                        <option value="French Tips">French Tips</option>
+                        <option value="Chrome Set">Chrome Set</option>
+                        <option value="Bridal Nails">Bridal Nails</option>
+                    </select>
+                </label>
+                <label>Preferred nail length?
+                    <select id="nailLength" required>
+                        <option value="">Select length</option>
+                        <option value="Short">Short</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Long">Long</option>
+                    </select>
+                </label>
+                <label>Preferred color or theme?
+                    <input id="nailTheme" type="text" placeholder="Optional details">
+                </label>
+                <button type="submit">Next</button>
+            </form>
+        </section>
+
+        <section id="nail-step-2" class="flow-step">
+            <p class="step-tag">Step 2</p>
+            <h2>Requirement & Appointment</h2>
+            <form id="nailAppointmentForm" class="flow-form">
+                <label>Name
+                    <input id="nailName" type="text" required>
+                </label>
+                <label>Appointment Date
+                    <input id="nailDate" type="date" required>
+                </label>
+                <label>Appointment Time
+                    <input id="nailTime" type="time" required>
+                </label>
+                <label>Extra Requirement
+                    <textarea id="nailRequirement" rows="4" placeholder="Write your requirement"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="nail-step-3" class="flow-step">
+            <p class="step-tag">Step 3</p>
+            <h2>Appointment Confirmed</h2>
+            <div class="confirmation-card">
+                <p><strong>Name:</strong> <span id="nailConfirmName"></span></p>
+                <p><strong>Style:</strong> <span id="nailConfirmStyle"></span></p>
+                <p><strong>Length:</strong> <span id="nailConfirmLength"></span></p>
+                <p><strong>Date:</strong> <span id="nailConfirmDate"></span></p>
+                <p><strong>Time:</strong> <span id="nailConfirmTime"></span></p>
+                <p><strong>Requirement:</strong> <span id="nailConfirmRequirement"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../shared.js"></script>
+    <script src="nails.js"></script>
+</body>
+</html>

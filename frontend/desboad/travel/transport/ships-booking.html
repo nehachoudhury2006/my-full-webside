@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship & Yacht Booking</title>
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../../index.html" data-transport-type="ships">
+    <nav class="booking-nav">
+        <a href="ships.html">← Back to Ships</a>
+        <div>SEA TICKETS</div>
+        <button class="mini-chip" data-logout data-redirect="../../../index.html">Logout</button>
+    </nav>
+    <main class="booking-shell">
+        <div class="booking-layout">
+            <section id="visualCard" class="visual-card">
+                <div class="visual-copy">
+                    <span class="meta-chip" id="packageLabel"></span>
+                    <h1 id="transportTitle"></h1>
+                    <p id="transportIntro"></p>
+                </div>
+            </section>
+            <section class="form-card">
+                <h2>Reserve ticket</h2>
+                <p>Choose your sea route and confirm guests. This booking will also appear in the cart page.</p>
+                <form id="transportBookingForm" class="booking-form">
+                    <label>Name <input id="transportName" type="text" required></label>
+                    <label>Package <input id="packageInput" type="text" readonly></label>
+                    <label>Date <input id="transportDate" type="date" required></label>
+                    <label>Time <input id="transportTime" type="time" required></label>
+                    <label>Travelers <input id="transportPeople" type="number" min="1" value="1" required></label>
+                    <label>Notes <textarea id="transportNotes" placeholder="Deck request or marina note"></textarea></label>
+                    <button class="booking-submit" type="submit">Book Sea Ticket</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="../../shared.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

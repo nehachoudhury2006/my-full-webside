@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Quiz Session</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../index.html">
+    <nav class="quiz-nav">
+        <a href="selon.html">Back to Salon Studio</a>
+        <div>Beauty Quiz</div>
+        <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+    </nav>
+
+    <main class="quiz-shell">
+        <section class="quiz-intro">
+            <p class="quiz-kicker">Fun engagement session</p>
+            <h1>Salon & beauty quick quiz</h1>
+            <p>Answer all seven questions. At the end, we’ll show your score out of seven.</p>
+        </section>
+
+        <form id="beautyQuizForm" class="quiz-card">
+            <div id="quizQuestions"></div>
+            <button type="submit" class="quiz-submit">See My Score</button>
+        </form>
+
+        <section id="quizResult" class="quiz-result" hidden>
+            <p class="quiz-kicker">Result</p>
+            <h2><span id="quizPlayerName">Guest</span>, you scored <span id="quizScore">0</span>/7.</h2>
+            <p id="quizSummary">Nice start. Keep exploring the beauty basics.</p>
+            <a href="selon.html" class="quiz-link">Return to Salon Studio</a>
+        </section>
+    </main>
+
+    <script src="../shared.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>

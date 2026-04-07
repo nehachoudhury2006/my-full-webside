@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Resort & Dining Hub</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="hub.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="theme-main" id="body" data-protect="true" data-home="../../index.html">
+    <nav class="top-nav" id="topNav">
+        <button class="back-btn" onclick="goHome()">Back to Hub</button>
+        <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+    </nav>
+
+    <section id="main-menu" class="main-menu">
+        <p class="section-kicker">Hospitality space</p>
+        <h1 class="main-title">Choose your stay or your table.</h1>
+        <p class="menu-copy">This section now has cleaner structure, no duplicate IDs, and separate views for rooms and food.</p>
+        <div class="choice-container">
+            <div class="choice-card" onclick="openHotel()">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Resort">
+                <div class="card-content">
+                    <h2>Grand Stays</h2>
+                    <p>Suites, skyline rooms, and premium amenities.</p>
+                </div>
+            </div>
+            <div class="choice-card" onclick="openFood()">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Dining">
+                <div class="card-content">
+                    <h2>Culinary Hub</h2>
+                    <p>Breakfast, lunch, and dinner menus with cleaner navigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotel-section">
+        <h1 class="section-title">The <span class="gold-text">Grand</span> Resort</h1>
+        <div class="hotel-grid">
+            <div class="hotel-card">
+                <img src="https://img.freepik.com/free-photo/interior-modern-comfortable-hotel-room_1232-1822.jpg?w=360" alt="Outlook View">
+                <div class="hotel-info">
+                    <h3>The Outlook View</h3>
+                    <p>Panoramic ocean views, private deck seating, and sunrise breakfast service.</p>
+                    <button class="mini-chip book-room-btn" data-room-name="The Outlook View" data-room-price="320">Book Room</button>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80" alt="Deluxe Suite">
+                <div class="hotel-info">
+                    <h3>Deluxe Suite</h3>
+                    <p>King bed, soaking tub, and a private balcony with late checkout.</p>
+                    <button class="mini-chip book-room-btn" data-room-name="Deluxe Suite" data-room-price="260">Book Room</button>
+                </div>
+            </div>
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80" alt="Sky Villa">
+                <div class="hotel-info">
+                    <h3>Sky Villa</h3>
+                    <p>Two-floor suite for longer stays with concierge and airport pickup.</p>
+                    <button class="mini-chip book-room-btn" data-room-name="Sky Villa" data-room-price="480">Book Room</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="food-section">
+        <h1 class="section-title">Gourmet <span class="red-text">Kitchen</span></h1>
+        <div class="meal-tabs">
+            <button class="tab-btn active" onclick="showMeal('breakfast', this)">Breakfast</button>
+            <button class="tab-btn" onclick="showMeal('lunch', this)">Lunch</button>
+            <button class="tab-btn" onclick="showMeal('dinner', this)">Dinner</button>
+        </div>
+
+        <div id="breakfast" class="menu-category active">
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=300&q=80" alt="Pancakes">
+                    <div class="food-info"><h4>Maple Pancakes</h4><span class="food-price">$14</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Maple Pancakes" data-food-price="14">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/fully-loaded-veggie-sandwiches-680bc41841c50.jpg?crop=0.660xw:1.00xh;0.171xw,0&resize=640:*" alt="Sandwich">
+                    <div class="food-info"><h4>Garden Sandwich</h4><span class="food-price">$16</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Garden Sandwich" data-food-price="16">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=300&q=80" alt="Avocado Toast">
+                    <div class="food-info"><h4>Avocado Toast</h4><span class="food-price">$18</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Avocado Toast" data-food-price="18">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?auto=format&fit=crop&w=300&q=80" alt="Fruit Bowl">
+                    <div class="food-info"><h4>Tropical Fruit Bowl</h4><span class="food-price">$12</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Tropical Fruit Bowl" data-food-price="12">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="lunch" class="menu-category">
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt="Burger">
+                    <div class="food-info"><h4>Truffle Burger</h4><span class="food-price">$22</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Truffle Burger" data-food-price="22">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Pasta">
+                    <div class="food-info"><h4>Lemon Butter Pasta</h4><span class="food-price">$24</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Lemon Butter Pasta" data-food-price="24">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=300&q=80" alt="Salad">
+                    <div class="food-info"><h4>Citrus Harvest Salad</h4><span class="food-price">$19</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Citrus Harvest Salad" data-food-price="19">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1521389508051-d7ffb5dc8df4?auto=format&fit=crop&w=300&q=80" alt="Risotto">
+                    <div class="food-info"><h4>Wild Mushroom Risotto</h4><span class="food-price">$27</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Wild Mushroom Risotto" data-food-price="27">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="dinner" class="menu-category">
+            <div class="food-grid">
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=300&q=80" alt="Salmon">
+                    <div class="food-info"><h4>Fire Roast Salmon</h4><span class="food-price">$32</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Fire Roast Salmon" data-food-price="32">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=300&q=80" alt="Steak">
+                    <div class="food-info"><h4>Pepper Steak Plate</h4><span class="food-price">$38</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Pepper Steak Plate" data-food-price="38">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Lobster">
+                    <div class="food-info"><h4>Butter Lobster Linguine</h4><span class="food-price">$42</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Butter Lobster Linguine" data-food-price="42">Add to Cart</button>
+                </div>
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=300&q=80" alt="Chicken">
+                    <div class="food-info"><h4>Herb Roast Chicken</h4><span class="food-price">$34</span></div>
+                    <button class="mini-chip food-order-btn" data-food-name="Herb Roast Chicken" data-food-price="34">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../shared.js"></script>
+    <script src="hub.js"></script>
+</body>
+</html>

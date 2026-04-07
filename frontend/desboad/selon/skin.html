@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Ritual Flow</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="skin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../index.html">
+    <nav class="detail-nav">
+        <a href="selon.html">Back to Salon</a>
+        <div>SKIN RITUALS</div>
+        <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+    </nav>
+
+    <main class="flow-shell">
+        <section id="skin-step-1" class="flow-step active-step">
+            <p class="step-tag">Step 1</p>
+            <h1>Skin Questions</h1>
+            <form id="skinQuestionForm" class="flow-form">
+                <label>What is your main concern?
+                    <select id="skinConcern" required>
+                        <option value="">Select concern</option>
+                        <option value="Hydration">Hydration</option>
+                        <option value="Acne Care">Acne Care</option>
+                        <option value="Glow Boost">Glow Boost</option>
+                        <option value="Sensitive Skin">Sensitive Skin</option>
+                    </select>
+                </label>
+                <label>What is your skin type?
+                    <select id="skinType" required>
+                        <option value="">Select skin type</option>
+                        <option value="Dry">Dry</option>
+                        <option value="Oily">Oily</option>
+                        <option value="Combination">Combination</option>
+                        <option value="Sensitive">Sensitive</option>
+                    </select>
+                </label>
+                <label>Any current treatment?
+                    <input id="skinTreatment" type="text" placeholder="Optional details">
+                </label>
+                <button type="submit">Next</button>
+            </form>
+        </section>
+
+        <section id="skin-step-2" class="flow-step">
+            <p class="step-tag">Step 2</p>
+            <h2>Requirement & Appointment</h2>
+            <form id="skinAppointmentForm" class="flow-form">
+                <label>Name
+                    <input id="skinName" type="text" required>
+                </label>
+                <label>Appointment Date
+                    <input id="skinDate" type="date" required>
+                </label>
+                <label>Appointment Time
+                    <input id="skinTime" type="time" required>
+                </label>
+                <label>Extra Requirement
+                    <textarea id="skinRequirement" rows="4" placeholder="Write your requirement"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="skin-step-3" class="flow-step">
+            <p class="step-tag">Step 3</p>
+            <h2>Appointment Confirmed</h2>
+            <div class="confirmation-card">
+                <p><strong>Name:</strong> <span id="skinConfirmName"></span></p>
+                <p><strong>Concern:</strong> <span id="skinConfirmConcern"></span></p>
+                <p><strong>Skin Type:</strong> <span id="skinConfirmType"></span></p>
+                <p><strong>Date:</strong> <span id="skinConfirmDate"></span></p>
+                <p><strong>Time:</strong> <span id="skinConfirmTime"></span></p>
+                <p><strong>Requirement:</strong> <span id="skinConfirmRequirement"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../shared.js"></script>
+    <script src="skin.js"></script>
+</body>
+</html>

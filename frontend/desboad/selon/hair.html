@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Design</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="hair.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../index.html">
+    <nav class="lookbook-nav">
+        <a href="selon.html" class="back-btn">Back to Salon</a>
+        <div class="logo">ELITE HAIR</div>
+        <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+    </nav>
+
+    <header class="lookbook-header">
+        <p class="section-kicker">Hair design</p>
+        <h1>Trending <span>Haircuts</span></h1>
+        <p>A visual lookbook for <span data-user-name data-fallback-name="Guest">Guest</span>, with quick booking for the most requested cuts and color work.</p>
+    </header>
+
+    <div class="lookbook-grid">
+        <div class="style-card">
+            <div class="price-overlay">$75</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=500&q=80" alt="Wolf Cut"></div>
+            <div class="info-section">
+                <h3 class="style-name">The Wolf Cut</h3>
+                <p>Heavy layers and face-framing texture.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+        <div class="style-card">
+            <div class="price-overlay">$65</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="Parisian Bob"></div>
+            <div class="info-section">
+                <h3 class="style-name">Parisian Bob</h3>
+                <p>Short, blunt, and chic with a clean finish.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+        <div class="style-card">
+            <div class="price-overlay">$55</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?auto=format&fit=crop&w=500&q=80" alt="Pixie Dream"></div>
+            <div class="info-section">
+                <h3 class="style-name">Pixie Dream</h3>
+                <p>Short, choppy layers for a bold statement.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+        <div class="style-card">
+            <div class="price-overlay">$180</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1620331311520-246422ff82f9?auto=format&fit=crop&w=500&q=80" alt="Honey Balayage"></div>
+            <div class="info-section">
+                <h3 class="style-name">Honey Balayage</h3>
+                <p>Warm blended color and shine repair.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+        <div class="style-card">
+            <div class="price-overlay">$40</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Curtain Bangs"></div>
+            <div class="info-section">
+                <h3 class="style-name">Curtain Bangs</h3>
+                <p>Soft sweeping fringe to frame the face.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+        <div class="style-card">
+            <div class="price-overlay">$85</div>
+            <div class="img-block"><img src="https://images.unsplash.com/photo-1501699169021-3759ee435d66?auto=format&fit=crop&w=500&q=80" alt="Cascading Layers"></div>
+            <div class="info-section">
+                <h3 class="style-name">Cascading Layers</h3>
+                <p>Weightless volume and movement for longer lengths.</p>
+                <button class="select-btn">Select Style</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <h2>Book <span id="modalStyleName">Style</span></h2>
+            <p class="modal-price">Price: <strong id="modalPriceTag"></strong></p>
+            <form id="bookingForm" class="booking-form">
+                <input id="hairDate" type="date" required>
+                <input id="hairTime" type="time" required>
+                <input id="hairPeople" type="number" min="1" value="1" required>
+                <button type="submit">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../shared.js"></script>
+    <script src="hair.js"></script>
+</body>
+</html>

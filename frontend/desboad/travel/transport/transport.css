@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    color: #f8fafc;
+    background: #071116;
+}
+
+.transport-shell {
+    min-height: 100vh;
+}
+
+.transport-nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 5%;
+    background: rgba(7, 17, 22, 0.58);
+    backdrop-filter: blur(16px);
+}
+
+.transport-nav a,
+.transport-nav div {
+    color: white;
+    text-decoration: none;
+}
+
+.transport-hero {
+    min-height: 86vh;
+    padding: 140px 5% 80px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.transport-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 17, 22, 0.2), rgba(7, 17, 22, 0.9));
+}
+
+.transport-copy {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.76rem;
+    color: #c4ebff;
+}
+
+.transport-copy h1,
+.transport-card h3,
+.booking-card h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.transport-copy h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.92;
+    margin-bottom: 14px;
+}
+
+.transport-copy p {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+}
+
+.transport-content {
+    width: min(1180px, 92%);
+    margin: -60px auto 80px;
+    position: relative;
+    z-index: 3;
+    display: grid;
+    gap: 20px;
+}
+
+.intro-panel,
+.transport-card,
+.booking-card {
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.intro-panel {
+    padding: 28px;
+}
+
+.intro-panel h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.intro-panel p {
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.8;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.booking-card {
+    padding: 24px;
+}
+
+.booking-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.booking-card p {
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.booking-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 12px 18px;
+    text-decoration: none;
+    background: white;
+    color: #071116;
+    font-weight: 800;
+}
+
+@media (max-width: 960px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+}

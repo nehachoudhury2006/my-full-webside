@@ -1,0 +1,106 @@
+.cart-page-shell {
+    border-radius: 30px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 28px;
+}
+
+.cart-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.cart-page-header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+.feedback-modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(6, 10, 18, 0.72);
+    backdrop-filter: blur(14px);
+    z-index: 4000;
+}
+
+.feedback-modal[hidden] {
+    display: none !important;
+}
+
+.feedback-card {
+    width: min(560px, 100%);
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, #f8fbff, #edf4ff);
+    color: #0f172a;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.32);
+}
+
+.feedback-card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.feedback-copy {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.feedback-card textarea {
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid #dbe2ea;
+    padding: 16px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 130px;
+}
+
+.feedback-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.feedback-primary,
+.feedback-secondary {
+    border: none;
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.feedback-primary {
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.feedback-secondary {
+    color: #0f172a;
+    background: #dbe7f6;
+}
+
+.cart-category-actions {
+    display: grid;
+    justify-items: end;
+    gap: 10px;
+}
+
+.remove-category-btn {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: rgba(239, 68, 68, 0.14);
+    color: #fecaca;
+    font-weight: 800;
+    cursor: pointer;
+}

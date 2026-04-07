@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Studio</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="salon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-protect="true" data-home="../../index.html">
+    <nav class="salon-nav">
+        <a href="../desboard.html" class="back-link">Dashboard</a>
+        <div class="salon-logo">Studio Muse</div>
+        <div class="nav-actions">
+            <button class="mini-chip" data-google-login>Login</button>
+            <button class="mini-chip" data-logout data-redirect="../../index.html">Logout</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Art-led beauty lounge</span>
+            <h1>Design your next <span class="glow">signature look</span>.</h1>
+            <p>Hair, skin, and nail experiences now have their own pages, bookings, and mood-led layouts.</p>
+        </div>
+    </header>
+
+    <section class="services">
+        <a href="hair.html" class="glass-card hair-card">
+            <div class="service-index">01</div>
+            <h3>Hair Design</h3>
+            <p>Cuts, color stories, gloss, and styling for every profile.</p>
+            <div class="price">Explore styles</div>
+        </a>
+
+        <a href="skin.html" class="glass-card skin-card">
+            <div class="service-index">02</div>
+            <h3>Skin Rituals</h3>
+            <p>Facials, dermaplaning, hydration, and glow-focused care menus.</p>
+            <div class="price">View rituals</div>
+        </a>
+
+        <a href="nails.html" class="glass-card nails-card">
+            <div class="service-index">03</div>
+            <h3>Nail Atelier</h3>
+            <p>Minimal manicures, chrome sets, expressive shapes, and repair.</p>
+            <div class="price">Browse sets</div>
+        </a>
+    </section>
+
+    <section class="mood-cta">
+        <div class="cta-box">
+            <p class="cta-kicker">Session active for <span data-user-name data-fallback-name="Guest">Guest</span></p>
+            <h2>Need help choosing the right category?</h2>
+            <p>Start with hair for a bold change, skin for event prep, or nails for quick styling impact.</p>
+            <button class="quiz-btn" onclick="openQuiz()">Get Recommendation</button>
+        </div>
+    </section>
+
+    <script src="../shared.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
