@@ -118,7 +118,7 @@ app.get("/api/v1/health", (_req, res) => {
 });
 
 app.get("/", (_req, res) => {
-  res.redirect("/desboad/login.html");
+  res.redirect("/index.html");
 });
 
 app.use(express.static(frontendPath));
