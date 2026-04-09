@@ -1,5 +1,4 @@
 import dotenv from "dotenv";
-import mongoose from "mongoose";
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
 
@@ -7,20 +6,37 @@ dotenv.config({
   path: "./.env",
 });
 
-(async () => {
+const port = process.env.PORT || 8001;
+let dbRetryTimer = null;
+
+const scheduleDbReconnect = () => {
+  if (dbRetryTimer) {
+    return;
+  }
+
+  dbRetryTimer = setTimeout(async () => {
+    dbRetryTimer = null;
+    try {
+      await connectDB();
+    } catch (error) {
+      console.error("MongoDB retry failed:", error.message);
+      scheduleDbReconnect();
+    }
+  }, 5000);
+};
+
+app.on("error", (error) => {
+  console.log("ERROR:", error);
+  throw error;
+});
+
+app.listen(port, async () => {
+  console.log(`Server is listening on port ${port}`);
+
   try {
     await connectDB();
-
-    app.on("error", (error) => {
-      console.log("ERROR:", error);
-      throw error;
-    });
-
-    app.listen(process.env.PORT || 8001, () => {
-      console.log(`Server is listening on port ${process.env.PORT || 8001}`);
-    });
   } catch (error) {
-    console.error("ERROR:", error);
-    process.exit(1);
+    console.error("Initial MongoDB connection failed:", error.message);
+    scheduleDbReconnect();
   }
-})();
+});

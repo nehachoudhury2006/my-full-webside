@@ -70,6 +70,7 @@ import { fileURLToPath } from "url";
 import { ApiError } from "./utils/apierror.js";
 import userRouter from "./routes/user.routes.js";
 import appointmentRouter from "./routes/appointment.routes.js";
+import { isDbReady } from "./db/index.js";
 import { loginUser, registerUser } from "./controllers/user.controller.js";
 import {
   createAppointment,
@@ -112,7 +113,12 @@ app.get("/api/v1/health", (_req, res) => {
   res.status(200).json({
     success: true,
     message: "API is running",
+    dbReady: isDbReady(),
   });
+});
+
+app.get("/", (_req, res) => {
+  res.redirect("/desboad/login.html");
 });
 
 app.use(express.static(frontendPath));
